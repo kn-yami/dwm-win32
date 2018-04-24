@@ -4,8 +4,8 @@
 #define normbordercolor 0x00cccccc
 #define normbgcolor     0x00cccccc
 #define normfgcolor     0x00000000
-#define selbordercolor  0x00ff6600
-#define selbgcolor      0x00ff6600
+#define selbordercolor  0x006a240a
+#define selbgcolor      0x006a240a
 #define selfgcolor      0x00ffffff
 
 static const unsigned int borderpx    = 2;        /* border pixel of windows */
