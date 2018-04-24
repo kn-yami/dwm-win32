@@ -165,11 +165,6 @@ static void updategeom(void);
 static void view(const Arg *arg);
 static void zoom(const Arg *arg);
 
-/* Shell hook stuff */
-
-typedef BOOL (*RegisterShellHookWindowProc) (HWND);
-RegisterShellHookWindowProc RegisterShellHookWindow;
-
 /* variables */
 static HWND dwmhwnd, barhwnd;
 static char stext[256];
@@ -1005,12 +1000,7 @@ setup(HINSTANCE hInstance) {
 	setupbar(hInstance);
 
 	arrange();
-	
-	/* Get function pointer for RegisterShellHookWindow */
-	RegisterShellHookWindow = (RegisterShellHookWindowProc)GetProcAddress(GetModuleHandle("USER32.DLL"), "RegisterShellHookWindow");
-	if (!RegisterShellHookWindow)
-		die("Could not find RegisterShellHookWindow");
-	RegisterShellHookWindow(dwmhwnd);
+
 	/* Grab a dynamic id for the SHELLHOOK message to be used later */
 	shellhookid = RegisterWindowMessage("SHELLHOOK");
 }
