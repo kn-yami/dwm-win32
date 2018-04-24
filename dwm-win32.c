@@ -170,12 +170,6 @@ static void zoom(const Arg *arg);
 typedef BOOL (*RegisterShellHookWindowProc) (HWND);
 RegisterShellHookWindowProc RegisterShellHookWindow;
 
-/* XXX: should be in a system header, no? */
-typedef struct {
-    HWND    hwnd;
-    RECT    rc;
-} SHELLHOOKINFO, *LPSHELLHOOKINFO;
-
 /* variables */
 static HWND dwmhwnd, barhwnd;
 static char stext[256];
