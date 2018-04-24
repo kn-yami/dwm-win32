@@ -9,7 +9,7 @@ MANPREFIX = ${PREFIX}/share/man
 
 # flags
 CPPFLAGS = -DVERSION=\"${VERSION}\"
-CFLAGS = -std=c99 -pedantic -Wall -Os ${CPPFLAGS}
+CFLAGS = -std=c99 -pedantic -Wall -march=native -O1 ${CPPFLAGS}
 LDFLAGS = -s -mwindows
 
 # compiler and linker
