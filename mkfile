@@ -1,5 +1,5 @@
-CC=clang -c -std=c99 -pedantic -Wall -march=native -O1 -DVERSION="alpha2"
-LD=clang -s -static -mwindows
+CC=gcc -c -std=c99 -pedantic -Wall -march=native -O1 -DVERSION="alpha2"
+LD=gcc -s -static -mwindows
 ALL=dwm-win32
 
 all:V: $ALL.exe
