@@ -1001,6 +1001,8 @@ setup(HINSTANCE hInstance) {
 
 	arrange();
 
+	RegisterShellHookWindow(dwmhwnd);
+
 	/* Grab a dynamic id for the SHELLHOOK message to be used later */
 	shellhookid = RegisterWindowMessage("SHELLHOOK");
 }
